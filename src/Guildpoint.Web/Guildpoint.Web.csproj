@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Guildpoint-55c4c818-ed7b-4a63-84f2-609513d0939f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Guildpoint.Configuration\Guildpoint.Configuration.csproj" />
+    <ProjectReference Include="..\Guildpoint.Core\Guildpoint.Core.csproj" />
+    <ProjectReference Include="..\Guildpoint.Data\Guildpoint.Data.csproj" />
+    <ProjectReference Include="..\Guildpoint.Services\Guildpoint.Services.csproj" />
+  </ItemGroup>
+
+</Project>

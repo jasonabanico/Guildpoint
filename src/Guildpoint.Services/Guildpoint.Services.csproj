@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Guildpoint.Configuration\Guildpoint.Configuration.csproj" />
+    <ProjectReference Include="..\Guildpoint.Core\Guildpoint.Core.csproj" />
+    <ProjectReference Include="..\Guildpoint.Data\Guildpoint.Data.csproj" />
+  </ItemGroup>
+
+</Project>
