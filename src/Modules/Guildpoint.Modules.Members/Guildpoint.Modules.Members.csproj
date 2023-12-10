@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,8 +9,13 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Guildpoint.Configuration\Guildpoint.Configuration.csproj" />
     <ProjectReference Include="..\..\Guildpoint.Core\Guildpoint.Core.csproj" />
-    <ProjectReference Include="..\..\Guildpoint.Data\Guildpoint.Data.csproj" />
-    <ProjectReference Include="..\..\Guildpoint.Services\Guildpoint.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

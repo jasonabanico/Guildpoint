@@ -9,8 +9,13 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Guildpoint.Configuration\Guildpoint.Configuration.csproj" />
     <ProjectReference Include="..\..\Guildpoint.Core\Guildpoint.Core.csproj" />
-    <ProjectReference Include="..\..\Guildpoint.Data\Guildpoint.Data.csproj" />
-    <ProjectReference Include="..\..\Guildpoint.Services\Guildpoint.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>
