@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Guildpoint.Data;
+using Guildpoint.Api;
+using Guildpoint.Services;
 
 namespace Guildpoint.Web
 {
@@ -15,6 +17,9 @@ namespace Guildpoint.Web
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddSingleton<INodeService, NodeService>();
+            builder.Services.AddGraphQLServer()
+                .AddQueryType<Query>();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -41,6 +46,8 @@ namespace Guildpoint.Web
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.MapGraphQL();
 
             app.MapControllerRoute(
                 name: "default",

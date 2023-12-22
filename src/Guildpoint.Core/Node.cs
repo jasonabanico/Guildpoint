@@ -8,7 +8,7 @@ namespace Guildpoint.Core
         public string Module { get; set; } = string.Empty;
         [Required]
         public string Name { get; set; } = string.Empty;
-        public string ParentNodeId { get; set; } = string.Empty;
+        public string ParentId { get; set; } = string.Empty;
         public string Slug { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
 

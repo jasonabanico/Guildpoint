@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL" Version="7.7.1" />
-    <PackageReference Include="GraphQL.MemoryCache" Version="7.7.1" />
-    <PackageReference Include="GraphQL.NewtonsoftJson" Version="7.7.1" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Guildpoint.Core\Guildpoint.Core.csproj" />
+    <ProjectReference Include="..\Guildpoint.Services\Guildpoint.Services.csproj" />
   </ItemGroup>
 
 </Project>
