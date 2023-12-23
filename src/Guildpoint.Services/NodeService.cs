@@ -12,7 +12,7 @@ namespace Guildpoint.Services
             _context = context;
         }
 
-        public async Task<Node> GetNode(string id)
+        public async Task<Node> GetNodeAsync(string id)
         {
             return await _context.Nodes.FindAsync(id);
         }
