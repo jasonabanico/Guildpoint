@@ -5,9 +5,8 @@ namespace Guildpoint.Api
 {
     public class Mutation
     {
-        public async Task AddNode([Service] INodeService nodeService, Node node)
-        {
-        }
+        public async Task AddNodeAsync([Service] INodeService nodeService, Node node)
+            => await nodeService.AddNodeAsync(node);
 
         public async Task UpdateNode([Service] INodeService nodeService, Node node)
         {

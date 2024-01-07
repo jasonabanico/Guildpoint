@@ -1,5 +1,6 @@
 ﻿using Guildpoint.Core;
 using Guildpoint.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Guildpoint.Services
 {
@@ -12,14 +13,21 @@ namespace Guildpoint.Services
             _context = context;
         }
 
+        public async Task AddNodeAsync(Node node)
+        {
+            node.Id = new Guid().ToString();
+            await _context.Nodes.AddAsync(node);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<Node> GetNodeAsync(string id)
         {
             return await _context.Nodes.FindAsync(id);
         }
 
-        public List<Node> GetNodesByParentId(string parentId)
+        public async Task<List<Node>> GetNodesByParentIdAsync(string parentId)
         {
-            return _context.Nodes.Where(n => n.ParentId == parentId).ToList();
+            return await _context.Nodes.Where(n => n.ParentId == parentId).ToListAsync();
         }
     }
 }

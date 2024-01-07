@@ -4,7 +4,8 @@ namespace Guildpoint.Services
 {
     public interface INodeService
     {
+        Task AddNodeAsync(Node node);
         Task<Node> GetNodeAsync(string id);
-        List<Node> GetNodesByParentId(string parentId);
+        Task<List<Node>> GetNodesByParentIdAsync(string parentId);
     }
 }
