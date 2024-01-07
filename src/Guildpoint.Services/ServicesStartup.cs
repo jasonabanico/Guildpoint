@@ -6,7 +6,7 @@ namespace Guildpoint.Services
     {
         public static void AddGuildpointServices(this IServiceCollection services)
         {
-            services.AddSingleton<INodeService, NodeService>();
+            services.AddScoped<INodeService, NodeService>();
         }
     }
 }
