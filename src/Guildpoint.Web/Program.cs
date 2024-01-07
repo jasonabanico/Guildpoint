@@ -13,13 +13,10 @@ namespace Guildpoint.Web
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? "Guildpoint.db";
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-            builder.Services.AddSingleton<INodeService, NodeService>();
-            builder.Services.AddGraphQLServer()
-                .AddQueryType<Query>();
+            builder.Services.AddGuildpointData(builder.Configuration);
+            builder.Services.AddGuildpointServices();
+            builder.Services.AddGuildpointApi();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
