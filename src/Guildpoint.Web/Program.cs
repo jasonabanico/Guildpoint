@@ -1,8 +1,8 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Guildpoint.Data;
 using Guildpoint.Api;
+using Guildpoint.Data;
+using Guildpoint.Modules.Common;
 using Guildpoint.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace Guildpoint.Web
 {
@@ -14,9 +14,12 @@ namespace Guildpoint.Web
 
             // Add services to the container.
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+            // Add Guildpoint services.
             builder.Services.AddGuildpointData(builder.Configuration);
             builder.Services.AddGuildpointServices();
             builder.Services.AddGuildpointApi();
+            builder.Services.AddGuildpointModulesCommon();
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -40,6 +43,9 @@ namespace Guildpoint.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            // Use Guildpoint services.
+            app.UseGuildpointApi();
 
             app.UseAuthentication();
             app.UseAuthorization();

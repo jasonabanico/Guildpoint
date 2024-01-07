@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="GraphQL.Client" Version="6.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Guildpoint.Core\Guildpoint.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -20,6 +20,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Guildpoint.Api\Guildpoint.Api.csproj" />
     <ProjectReference Include="..\Guildpoint.Data\Guildpoint.Data.csproj" />
+    <ProjectReference Include="..\Modules\Guildpoint.Modules.Common\Guildpoint.Modules.Common.csproj" />
+    <ProjectReference Include="..\Modules\Guildpoint.Modules.Events\Guildpoint.Modules.Events.csproj" />
+    <ProjectReference Include="..\Modules\Guildpoint.Modules.Members\Guildpoint.Modules.Members.csproj" />
+    <ProjectReference Include="..\Modules\Guildpoint.Modules.Pages\Guildpoint.Modules.Pages.csproj" />
+    <ProjectReference Include="..\Modules\Guildpoint.Modules.Shop\Guildpoint.Modules.Shop.csproj" />
   </ItemGroup>
 
 </Project>
