@@ -6,7 +6,9 @@ namespace Guildpoint.Api
     {
         public static void AddGuildpointApi(this IServiceCollection services)
         {
-            services.AddGraphQLServer().AddQueryType<Query>();
+            services.AddGraphQLServer()
+                .AddQueryType<Query>()
+                .AddMutationType<Mutation>();
         }
     }
 }

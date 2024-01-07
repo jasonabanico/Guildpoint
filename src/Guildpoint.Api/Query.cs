@@ -8,7 +8,7 @@ namespace Guildpoint.Api
         public async Task<Node> GetNode([Service] INodeService nodeService, string id)
             => await nodeService.GetNodeAsync(id);
 
-        public List<Node> GetNodesByParenetId([Service] INodeService nodeService, string parentId) 
+        public List<Node> GetNodesByParentId([Service] INodeService nodeService, string parentId) 
             => nodeService.GetNodesByParentId(parentId);
     }
 }
